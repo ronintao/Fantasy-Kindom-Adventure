@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24D91DCA-A933-4762-064E-7542FA085737}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>5.4.0f3</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_4_0;UNITY_5_4;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_EDITOR_RETINA;ENABLE_RETINA_GUISTYLES;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU;CROSS_PLATFORM_INPUT</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_4_0;UNITY_5_4;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_EDITOR_RETINA;ENABLE_RETINA_GUISTYLES;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU;CROSS_PLATFORM_INPUT</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\AnimTest.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\EasyTouchTrigger.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickBase.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickDrag.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickEnterOverExist.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickLongTap.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickPinch.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickSwipe.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTap.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTouch.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTwist.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\BaseFinger.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\ECamera.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\EasyTouch.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\EasyTouchInput.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\Finger.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\Gesture.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouch\Plugins\Engine\TwoFingerGesture.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Component\ETCSetDirectActionTransform.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ComponentExtensions.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCArea.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCAxis.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCBase.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCButton.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCDPad.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCInput.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCJoystick.cs" />
+    <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\ETCTouchPad.cs" />
+    <Compile Include="Assets\FMOD\Script\BankRefAttribute.cs" />
+    <Compile Include="Assets\FMOD\Script\EventRefAttribute.cs" />
+    <Compile Include="Assets\FMOD\Script\OneshotList.cs" />
+    <Compile Include="Assets\FMOD\Script\ParamRef.cs" />
+    <Compile Include="Assets\FMOD\Script\RuntimeManager.cs" />
+    <Compile Include="Assets\FMOD\Script\RuntimeUtils.cs" />
+    <Compile Include="Assets\FMOD\Script\Settings.cs" />
+    <Compile Include="Assets\FMOD\Script\StudioBankLoader.cs" />
+    <Compile Include="Assets\FMOD\Script\StudioEventEmitter.cs" />
+    <Compile Include="Assets\FMOD\Script\StudioListener.cs" />
+    <Compile Include="Assets\FMOD\Script\StudioParameterTrigger.cs" />
+    <Compile Include="Assets\FMOD\Script\Wrapper\fmod.cs" />
+    <Compile Include="Assets\FMOD\Script\Wrapper\fmod_dsp.cs" />
+    <Compile Include="Assets\FMOD\Script\Wrapper\fmod_errors.cs" />
+    <Compile Include="Assets\FMOD\Script\Wrapper\fmod_studio.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\EnvelopContent.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\LanguageSelection.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\TypewriterEffect.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIButton.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonActivate.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonColor.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonKeys.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonMessage.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonOffset.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonRotation.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonScale.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UICenterOnChild.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UICenterOnClick.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIDragCamera.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIDragDropContainer.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIDragDropItem.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIDragDropRoot.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIDragObject.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIDragResize.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIDragScrollView.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIDraggableCamera.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIEventTrigger.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIForwardEvents.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIGrid.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIImageButton.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIKeyBinding.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIKeyNavigation.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIPlayAnimation.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIPlaySound.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIPlayTween.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIPopupList.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIProgressBar.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UISavedOption.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIScrollBar.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIScrollView.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIShowControlScheme.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UISlider.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UISoundVolume.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UITable.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIToggle.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIToggledComponents.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIToggledObjects.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIWidgetContainer.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Interaction\UIWrapContent.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\ActiveAnimation.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\AnimationOrTween.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\BMFont.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\BMGlyph.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\BMSymbol.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\BetterList.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\ByteReader.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\EventDelegate.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\Localization.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\NGUIDebug.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\NGUIMath.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\NGUIText.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\NGUITools.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\PropertyBinding.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\PropertyReference.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\RealTime.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\SpringPanel.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\UIBasicSprite.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\UIDrawCall.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\UIEventListener.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\UIGeometry.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\UIRect.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\UISnapshotPoint.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Internal\UIWidget.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\AnimatedAlpha.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\AnimatedColor.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\AnimatedWidget.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\SpringPosition.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\TweenAlpha.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\TweenColor.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\TweenFOV.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\TweenFill.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\TweenHeight.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\TweenOrthoSize.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\TweenPosition.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\TweenRotation.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\TweenScale.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\TweenTransform.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\TweenVolume.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\TweenWidth.cs" />
+    <Compile Include="Assets\NGUI\Scripts\Tweening\UITweener.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UI2DSprite.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UI2DSpriteAnimation.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UIAnchor.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UIAtlas.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UICamera.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UIColorPicker.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UIFont.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UIInput.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UIInputOnGUI.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UILabel.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UILocalize.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UIOrthoCamera.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UIPanel.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UIRoot.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UISprite.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UISpriteAnimation.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UISpriteData.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UIStretch.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UITextList.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UITexture.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
+    <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
+    <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DAddCameraTargetAction.cs" />
+    <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DAdjustCameraTargetInfluenceAction.cs" />
+    <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DApplyInfluenceAction.cs" />
+    <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DApplyInfluencesTimedAction.cs" />
+    <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DCinematicsToggleAction.cs" />
+    <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DMoveCameraInstantlyToPositionAction.cs" />
+    <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DRemoveCameraTargetAction.cs" />
+    <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DShakeAction.cs" />
+    <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DShakeWithPresetAction.cs" />
+    <Compile Include="Assets\ProCamera2D\3rd Party Plugins Support\PlayMakerActions\ProCamera2DShakeWithValuesAction.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\BasePC2D.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\BaseTrigger.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\BoundariesAnimator.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\CameraTarget.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\EnumMovementAxis.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\EnumUpdateType.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\IPositionDeltaChanger.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\IPositionOverrider.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\IPostMover.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\IPreMover.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\ISizeDeltaChanger.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\ISizeOverrider.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\KDTree.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\MoveInColliderBoundaries.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\Utils\EditorPrefsX.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\Utils\PrefsData.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Core\Utils\Utils.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DCameraWindow.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DCinematics.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DForwardFocus.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DGeometryBoundaries.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DLimitDistance.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DLimitSpeed.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DNumericBoundaries.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DPanAndZoom.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DParallax.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DPixelPerfect.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DPointerInfluence.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DRails.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DRepeater.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DShake.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DSpeedBasedZoom.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DTransitionsFX.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Extensions\ProCamera2DZoomToFitTargets.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Helpers\Letterbox\ProCamera2DLetterbox.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Helpers\Parallax\ProCamera2DParallaxObject.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Helpers\Pixel Perfect\ProCamera2DPixelPerfectSprite.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Triggers\ProCamera2DTriggerBoundaries.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Triggers\ProCamera2DTriggerInfluence.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Triggers\ProCamera2DTriggerRails.cs" />
+    <Compile Include="Assets\ProCamera2D\Code\Triggers\ProCamera2DTriggerZoom.cs" />
+    <Compile Include="Assets\ProCamera2D\ProCamera2D.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\AnimStateBase.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\AnimStateChooseClipRandom.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\AnimStateDebug.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\AnimStateSetBoolOnEnterExit.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\AnimStateWaitRandomly.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\Animation\AnimState_Idle.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\Animation\AnimState_Move.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\CollectData\AnimState_CollectData.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\ExecuteMove\AnimState_Move_Bounce.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\ExecuteMove\AnimState_Move_Fall.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\ExecuteMove\AnimState_Move_Jump.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\ExecuteMove\AnimState_Move_Land.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\ExecuteMove\AnimState_Move_OnLand.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\ExecuteMove\AnimState_Move_Slide.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\SetParams\AnimState_SetParam_Base.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\SetParams\AnimState_SetParam_InAir.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\AnimState\SetParams\AnimState_SetParam_OnLand.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\CharacterControllerSetting.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\Constant.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\Data\AnimStateInfo.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\Data\CharacterControllerData.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\Data\DataCollector.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\Data\InputData.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\Data\PlayerInfo.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\Data\RuntimeMoveData.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\MoveControllerSetup.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Base\PlayerAbility.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\InteractiveObject\BoucingObject.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\InteractiveObject\Ladder.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Move2D\AnimateState\MoveAnimState2DMove.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Move2D\Move2DSetup.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Move2D\MoveState\MoveState2DInAir.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Move2D\MoveState\MoveState2DJump.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\Move2D\MoveState\MoveState2DNone.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\RoninController.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\Collections\ArrayExtend.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\CommonHelper\MathHelper.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\CommonHelper\StringHelper.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\DelegateDefine.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\FileHelper\CSVReader.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\FileHelper\FileHelper.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\FileHelper\SimpleJSON.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\GrammarHelper\RoninComponent.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\GrammarHelper\RoninSingleton.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\GrammarHelper\ThreadAndLockHelper.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\TmpValues\TmpValues.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\UnityFunctionEnhancement\AnimationEX.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\UnityFunctionEnhancement\DebugEX.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\UnityFunctionEnhancement\LayerEX.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\UnityFunctionEnhancement\PhysicsEX.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\UnityFunctionEnhancement\TransformEX.cs" />
+    <Compile Include="Assets\RoninUtils\Helper\UnityFunctionEnhancement\VectorEX.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\AudioService\AudioService.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\AudioService\RoninEventDescriptionEnhance.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\BaseStruct\GameFramework.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\BaseStruct\GameFramework_ServiceList.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\BaseStruct\GameService.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\ConfigService\BaseConfigData.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\ConfigService\ConfigService.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\ConfigService\ConfigServieCfg.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\ConfigService\SystemConfigFile.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\EventService\Event.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\EventService\EventService.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\InputService\InputService.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\PoolService\PoolManager\PoolManager.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\PoolService\PoolManager\PreRuntimePoolItem.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\PoolService\PoolManager\SpawnPool.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\PoolService\PoolManager\SpawnPoolExtended.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\PoolService\PoolService.cs" />
+    <Compile Include="Assets\RoninUtils\RoninFramework\PrefabService\PrefabService.cs" />
+    <Compile Include="Assets\Test.cs" />
+    <Compile Include="Assets\TestComponent.cs" />
+    <Compile Include="Assets\TestSwitch.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\EasyTouchBundle\EasyTouch\How to migrate from EasyTouch 4.X.txt" />
+    <None Include="Assets\EasyTouchBundle\EasyTouch\RealseNotes.txt" />
+    <None Include="Assets\EasyTouchBundle\EasyTouch\_Documentation\How to migrate from EasyTouch 4.X.txt" />
+    <None Include="Assets\EasyTouchBundle\EasyTouchControls\Documentation\Version 2.0.txt" />
+    <None Include="Assets\EasyTouchBundle\EasyTouchControls\Issues in button behavior (MAC).txt" />
+    <None Include="Assets\EasyTouchBundle\EasyTouchControls\ReleaseNotes.txt" />
+    <None Include="Assets\EasyTouchBundle\Readme.txt" />
+    <None Include="Assets\Fold Rule.txt" />
+    <None Include="Assets\NGUI\ReadMe - 3.10.0.txt" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored (TextureClip).shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 1.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 2.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 3.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text (TextureClip).shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 1.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 2.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text 3.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed) (TextureClip).shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (TextureClip).shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored 1.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored 2.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored 3.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Masked 1.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Masked 2.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Masked 3.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Masked.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 1.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 2.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
+    <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed.shader" />
+    <None Include="Assets\ProCamera2D\Code\Helpers\Letterbox\Resources\Letterbox.shader" />
+    <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Blinds.shader" />
+    <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Circle.shader" />
+    <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Fade.shader" />
+    <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Shutters.shader" />
+    <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Wipe.shader" />
+    <None Include="Assets\ProCamera2D\README.txt" />
+    <None Include="Assets\RoninUtils\ResouceIndex\Readme.txt" />
+    <None Include="Assets\Shaders\Resources\Unlit-Colored.shader" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
+</Project>
