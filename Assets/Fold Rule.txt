@@ -1,0 +1,2 @@
+1. Resources 必须统一放在 Resources 文件夹下，不可以单独再建立 Resources 文件夹
+2. Editor 各自放在各自的模块下
