@@ -109,6 +109,25 @@ namespace RoninUtils.Helper {
         #endregion
 
 
+        #region List Dictionary
+
+        public static void AddListItem<Tkey, TValue>(this Dictionary<Tkey, List<TValue>> dictionary, Tkey key, TValue value) {
+            if (dictionary.ContainsKey(key)) {
+                dictionary[key].Add(value);
+            } else {
+                dictionary.Add(key, new List<TValue>(){value} );
+            }
+        }
+
+        public static void RemoveListItem<TKey, TValue>(this Dictionary<TKey, List<TValue>> dictionary, TKey key, TValue value, bool removeKeyIfEmpty = false) {
+            dictionary[key].Remove(value);
+            if (removeKeyIfEmpty && dictionary[key].Count == 0)
+                dictionary.Remove(key);
+        }
+
+        #endregion
+
+
         #region List Enhancement
 
         /// <summary>
