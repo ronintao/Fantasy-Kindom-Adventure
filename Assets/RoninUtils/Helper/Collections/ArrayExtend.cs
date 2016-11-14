@@ -52,8 +52,8 @@ namespace RoninUtils.Helper {
             if (array == null)
                 return;
 
-            for (int i = 0; i < array.Length; i++) {
-                action(array[i]);
+            foreach (TValue value in array) {
+                action(value);
             }
         }
 
@@ -93,8 +93,6 @@ namespace RoninUtils.Helper {
         }
 
 
-
-
         /// <summary>
         /// 遍历字典的值，似乎没有特别好的办法规避 foreach
         /// </summary>
@@ -107,24 +105,6 @@ namespace RoninUtils.Helper {
         public static TValue GetValueSafe<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TKey key, TValue defaultValue = default(TValue)) {
             return dictionary.ContainsKey(key) ? dictionary[key] : defaultValue;
         }
-
-
-        public static TValue GetValueOrNew<TKey, TValue> (this Dictionary<TKey, TValue> dictionary, TKey key) where TValue : new() {
-            if (!dictionary.ContainsKey(key))
-                dictionary.Add(key, new TValue());
-
-            return dictionary[key];
-        }
-
-
-        public static void AddOrExecute<TKey, TValue> (this Dictionary<TKey, TValue> dictionary, TKey key, TValue value, Action<TValue> action) {
-            if ( !dictionary.ContainsKey(key) )
-                dictionary.Add(key, value);
-            else
-                action(dictionary[key]);
-        }
-
-
 
         #endregion
 
@@ -175,18 +155,24 @@ namespace RoninUtils.Helper {
             }
         }
 
-        /// <summary>
-        /// 处理列表，并移除部分元素 (需要注意的是，这个列表是从后向前处理的)
-        /// </summary>
-        /// <param name="processFunc">如果return true，则该元素将被移除</param>
-        public static void ProcessAndRemove<TValue>(this List<TValue> list, Judge<TValue> processFunc) {
-            int listCount = list.Count;
-            for (int i = listCount - 1; i >= 0; i --) {
-                if ( processFunc(list[i]) )
-                    list.RemoveAt(i);
-            }
-        }
 
+        /// <summary>
+        /// 移除元素，并返回移除的元素列表
+        /// </summary>
+        /// <param name="judgeFunc">return true if want to remove the item</param>
+        public static List<TValue> Remove<TValue> (this List<TValue> list, Judge<TValue> judgeFunc) {
+            List<TValue> removeList = new List<TValue>();
+
+            int listCount = list.Count;
+            for (int i = listCount - 1; i >= 0; i--) {
+                TValue item = list[i];
+                if (judgeFunc(item)) {
+                    removeList.Add(item);
+                    list.RemoveAt(i);
+                }
+            }
+            return removeList;
+        }
 
         #endregion
     }

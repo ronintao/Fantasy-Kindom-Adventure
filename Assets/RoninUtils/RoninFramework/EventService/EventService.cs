@@ -35,29 +35,16 @@ namespace RoninUtils.RoninFramework {
          */
         private Dictionary<Event, EventHandlerFunc> mIDEventHandlers   = new Dictionary<Event, EventHandlerFunc>();
 
-        /**
-         * 未消费的 stick 事件列表
-         */
-        private List<Event> mStickySyncEvents  = new List<Event>();
-
-
         #region Register Event
 
         /// <summary>
         /// 监听一类事件
         /// </summary>
-        public void RegisterEvent(Type eventType, EventHandlerFunc callback, bool checkStickEvent = false) {
-            mTypeEventHandlers.AddOrExecute(eventType, callback, del => del += callback);
-
-            // Fire All Sticky Event if need
-            if (checkStickEvent) {
-                List<Event> fireStickEventList = new List<Event>();
-                mStickySyncEvents .ValueForEach( stickEvent => {
-                    if (stickEvent.eventType == eventType)
-                        fireStickEventList.Add(stickEvent); }
-                );
-                fireStickEventList.ValueForEach( stickEvent => { FireStickEvent(stickEvent, callback); } );
-            }
+        public void RegisterEvent(Type eventType, EventHandlerFunc callback) {
+            if (mTypeEventHandlers.ContainsKey(eventType))
+                mTypeEventHandlers[eventType] += callback;
+            else
+                mTypeEventHandlers.Add(eventType, callback);
         }
 
 
@@ -66,11 +53,10 @@ namespace RoninUtils.RoninFramework {
         /// </summary>
         public void RegisterEvent(Type eventType, int eventID, EventHandlerFunc callback, bool checkStickEvent = false) {
             Event e = new Event(eventType, eventID);
-            mIDEventHandlers.AddOrExecute(e, callback, del => del += callback);
-
-            if (checkStickEvent && mStickySyncEvents.Contains(e)) {
-                FireStickEvent(e, callback);
-            }
+            if (mIDEventHandlers.ContainsKey(e))
+                mIDEventHandlers[e] += callback;
+            else
+                mIDEventHandlers.Add(e, callback);
         }
 
 
@@ -128,20 +114,6 @@ namespace RoninUtils.RoninFramework {
             FireNormalEventID(e);
         }
 
-
-        /// <summary>
-        /// 发送 sticky 事件
-        /// </summary>
-        public void SendStickEvent (Type eventType, int eventID) {
-            bool consumed = false;
-            Event e = new Event(eventType, eventID);
-            consumed |= FireNormalEventType(e);
-            consumed |= FireNormalEventID(e);
-
-            if (!consumed && !mStickySyncEvents.Contains(e))
-                mStickySyncEvents.Add(e);
-        }
-
         #endregion
 
 
@@ -168,14 +140,6 @@ namespace RoninUtils.RoninFramework {
                 return true;
             }
             return false;
-        }
-
-        /**
-         * Fire Stick Event And remove this event from sticky event list
-         */
-        private void FireStickEvent (Event stickEvent, EventHandlerFunc callback) {
-            mStickySyncEvents.Remove(stickEvent);
-            callback(stickEvent.eventType, stickEvent.eventID);
         }
 
         #endregion

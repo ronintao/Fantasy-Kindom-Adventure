@@ -142,11 +142,11 @@ namespace RoninUtils.RoninFramework {
 
             List<string> completeRequests = TmpValueHelper.GetTmpStringList();
             mAsyncLoadRequests.ValueForeach(
-                asyncLoadRequests => {
-                    if (asyncLoadRequests.request.isDone) {
-                        AddToLoadedListIfNeed(asyncLoadRequests.id, asyncLoadRequests.request.asset as GameObject);
-                        asyncLoadRequests.callback(asyncLoadRequests.request.asset as GameObject, asyncLoadRequests.id);
-                        completeRequests.Add(asyncLoadRequests.id);
+                req => {
+                    if (req.request.isDone) {
+                        AddToLoadedListIfNeed(req.id, req.request.asset as GameObject);
+                        req.callback(req.request.asset as GameObject, req.id);
+                        completeRequests.Add(req.id);
                     }
                 });
             completeRequests.ValueForEach(id => mAsyncLoadRequests.Remove(id));

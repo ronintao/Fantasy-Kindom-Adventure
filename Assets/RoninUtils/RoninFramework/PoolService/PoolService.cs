@@ -199,15 +199,7 @@ namespace RoninUtils.RoninFramework {
          * 销毁 延迟队列 中的计划任务
          */
         private void DespawnSchedule() {
-            mDestroySchedule.ProcessAndRemove(
-                schedule => {
-                    if (schedule.ScheduleTime <= Time.time) {
-                        Despawn(schedule.Pool, schedule.Object);
-                        return true;
-                    } else {
-                        return false;
-                    }
-                });
+            mDestroySchedule.Remove(schedule => schedule.ScheduleTime <= Time.time).ValueForEach(schedule => Despawn(schedule.Pool, schedule.Object));
         }
 
         #endregion
