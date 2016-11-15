@@ -23,8 +23,8 @@ namespace RoninUtils.RoninCharacterController {
             mHashCode = GetHashCode();
 
             mConfig = animator.GetComponent<MoveControllerSetup>();
-            mDataCollector = mConfig.GetDataCollector();
-            mMoveImpl      = mConfig.GetCharacterController();
+            mDataCollector = mConfig.dataCollector;
+            mMoveImpl      = mConfig.cc;
 
             if ( mMoveData.animInfo.IsInState(layerIndex, stateInfo.fullPathHash, mHashCode) )
                 return;

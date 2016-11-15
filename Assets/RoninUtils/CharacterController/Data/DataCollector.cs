@@ -64,7 +64,7 @@ namespace RoninUtils.RoninCharacterController {
         #region Collect Collision Data
 
         protected virtual void CollectCollisionData() {
-            RoninController             ccWrap = mSetup.GetCharacterController();
+            RoninController             ccWrap = mSetup.cc;
             CharacterController         cc     = ccWrap.GetCCImpl();
             List<ControllerColliderHit> hits   = ccWrap.GetLastHits();
 
@@ -109,7 +109,7 @@ namespace RoninUtils.RoninCharacterController {
 
         private void CollectPlayerInfoData() {
             PlayerInfo playerInfoData = mData.playerInfo;
-            PlayerAbility ability = mSetup.GetPlayerAbility();
+            PlayerAbility ability = mSetup.ability;
 
             playerInfoData.canSecondJump = ability.Can2ndJump;
             playerInfoData.moveSpeed     = ability.moveSpeed;

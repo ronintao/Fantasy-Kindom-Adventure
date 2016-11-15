@@ -16,22 +16,25 @@ namespace RoninUtils.RoninCharacterController {
          *************************************************/
 
         // 数据采集者，需要在本类（或子类）中 create
-        private DataCollector mDataCollector;
+        internal DataCollector dataCollector { get; private set; }
 
         // 动画的执行者，需要在本 gameobject 上绑定
-        private Animator mAnimator;
+        internal Animator animator { get; private set; }
 
         // 外观的根节点，作为子节点存在，也可能来自于外部设入
-        private GameObject mVisual;
+        internal GameObject visual { get; private set; }
 
         // CC 的数据配置者，来自于 Visual 节点
-        private CharacterControllerSetting mCCSetting;
+        internal CharacterControllerSetting ccSetting { get; private set; }
+
+        // Attack Area 的数据配置，来自于 Visual 节点
+        internal AttackAreaSetting attackAreaSetting { get; private set; }
 
         // 移动的执行者
-        private RoninController mCC;
+        internal RoninController cc { get; private set; }
 
         // 行动能力限定，来自 CC
-        private PlayerAbility mAbility;
+        internal PlayerAbility ability { get; private set; }
 
 
         /*************************************************
@@ -54,30 +57,33 @@ namespace RoninUtils.RoninCharacterController {
 
             // Init Visual
             if (inheritVisual) {
-                mVisual = predecessor.mVisual;
-                mVisual.SetParent(this);
+                visual = predecessor.visual;
+                visual.SetParent(this);
             } else {
-                mVisual = transform.GetChild(0).gameObject;
+                visual = transform.GetChild(0).gameObject;
             }
 
             // Init CC Setting
-            mCCSetting = mVisual.GetComponent<CharacterControllerSetting>();
+            ccSetting = visual.GetComponent<CharacterControllerSetting>();
+
+            // Init Attack Area
+            attackAreaSetting = visual.GetComponent<AttackAreaSetting>();
 
             // Init CC
-            mCC = controller;
-            mCC.SetCCParams(mCCSetting.ActiveSetting(initCCState));
+            cc = controller;
+            cc.SetCCParams(ccSetting.ActiveSetting(initCCState));
 
             // Init Ability
-            mAbility = mCC.GetComponent<PlayerAbility>();
+            ability = cc.GetComponent<PlayerAbility>();
 
             // Init DataCollector
-            mDataCollector = mDataCollector ?? CreateDataCollector();
-            mDataCollector.Init(this);
+            dataCollector = dataCollector ?? CreateDataCollector();
+            dataCollector.Init(this);
 
             // Init Animator
-            mAnimator = mAnimator ?? GetComponent<Animator>();
+            animator = animator ?? GetComponent<Animator>();
             if (inheritAnimator)
-                predecessor.mAnimator.CopyTo(mAnimator);
+                predecessor.animator.CopyTo(animator);
         }
 
         /// <summary>
@@ -93,46 +99,24 @@ namespace RoninUtils.RoninCharacterController {
         /// </summary>
         internal void Stop() {
             gameObject.SetActive(false);
-            mVisual = null;
-            mCC     = null;
+            visual = null;
+            cc     = null;
         }
-
-
 
 
 
         /*************************************************
          * 
-         * Getter
+         * Event Hander
          * 
          *************************************************/
-
-        internal DataCollector GetDataCollector () {
-            return mDataCollector;
-        }
-
-        internal Animator GetAnimator() {
-            return mAnimator;
-        }
-
-        internal GameObject GetVisual () {
-            return mVisual;
-        }
-
-        internal RoninController GetCharacterController () {
-            return mCC;
-        }
-
-        internal PlayerAbility GetPlayerAbility() {
-            return mAbility;
-        }
 
         /// <summary>
         /// 用来接收 animation 或是外界的事件
         /// </summary>
         public void ChangeCCConfig(string mode) {
-            if (mCC != null)
-                mCC.SetCCParams(mCCSetting.ActiveSetting(mode));
+            if (cc != null)
+                cc.SetCCParams(ccSetting.ActiveSetting(mode));
         }
 
     }
