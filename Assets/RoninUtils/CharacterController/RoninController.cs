@@ -67,7 +67,7 @@ namespace RoninUtils.RoninCharacterController {
         /// <summary>
         /// 复制 CC 的参数
         /// </summary>
-        public void SetCCParams(CharacterControllerSettingItem paramSetting) {
+        public void SetCCParams(CCCollideSettingItem paramSetting) {
             paramSetting.CopyTo(mCCImpl);
         }
 

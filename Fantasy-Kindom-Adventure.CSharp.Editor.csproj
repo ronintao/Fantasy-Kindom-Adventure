@@ -82,6 +82,9 @@
     <Reference Include="UnityEditor.Graphs">
       <HintPath>Library\UnityAssemblies\UnityEditor.Graphs.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>Library\UnityAssemblies\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
@@ -117,6 +120,19 @@
     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCJoystickInspector.cs" />
     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCMenu.cs" />
     <Compile Include="Assets\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCTouchPadInspector.cs" />
+    <Compile Include="Assets\Editor\RoninUtils\CharacterController\AttackAreaSettingInspector.cs" />
+    <Compile Include="Assets\Editor\RoninUtils\Helper\AnimationCurveEnhance\AnimationCurveExtractor.cs" />
+    <Compile Include="Assets\Editor\RoninUtils\Helper\AnimationCurveEnhance\BetterAnimationCurveFieldDrawer.cs" />
+    <Compile Include="Assets\Editor\RoninUtils\Helper\EditorHelper\RoninScriptableWizard.cs" />
+    <Compile Include="Assets\Editor\RoninUtils\ProjectStartUp\ProjectStartUp.cs" />
+    <Compile Include="Assets\Editor\RoninUtils\ProjectStartUp\StartUpService\LayerStartUp.cs" />
+    <Compile Include="Assets\Editor\RoninUtils\ResouceIndex\Internal\ResouceIndexGenerator.cs" />
+    <Compile Include="Assets\Editor\RoninUtils\ResouceIndex\ResouceIndexConfig.cs" />
+    <Compile Include="Assets\Editor\RoninUtils\ResouceIndex\ResouceIndexMenu.cs" />
+    <Compile Include="Assets\Editor\RoninUtils\ResouceIndex\ResouceIndexProcesser.cs" />
+    <Compile Include="Assets\Editor\RoninUtils\RoninFramework\PoolService\PGEditorUtils.cs" />
+    <Compile Include="Assets\Editor\RoninUtils\RoninFramework\PoolService\PreRuntimePoolItemInspector.cs" />
+    <Compile Include="Assets\Editor\RoninUtils\RoninFramework\PoolService\SpawnPoolInspector.cs" />
     <Compile Include="Assets\FMOD\Editor\BankRefDrawer.cs" />
     <Compile Include="Assets\FMOD\Editor\CreateEventPopup.cs" />
     <Compile Include="Assets\FMOD\Editor\EditorBankRef.cs" />
@@ -246,18 +262,6 @@
     <Compile Include="Assets\ProCamera2D\Code\Triggers\Editor\ProCamera2DTriggerInfluenceEditor.cs" />
     <Compile Include="Assets\ProCamera2D\Code\Triggers\Editor\ProCamera2DTriggerRailsEditor.cs" />
     <Compile Include="Assets\ProCamera2D\Code\Triggers\Editor\ProCamera2DTriggerZoomEditor.cs" />
-    <Compile Include="Assets\RoninUtils\Helper\Editor\AnimationCurveExtractor.cs" />
-    <Compile Include="Assets\RoninUtils\Helper\Editor\BetterAnimationCurveFieldDrawer.cs" />
-    <Compile Include="Assets\RoninUtils\Helper\EditorHelper\Editor\RoninScriptableWizard.cs" />
-    <Compile Include="Assets\RoninUtils\ProjectStartUp\Editor\ProjectStartUp.cs" />
-    <Compile Include="Assets\RoninUtils\ProjectStartUp\Editor\StartUpService\LayerStartUp.cs" />
-    <Compile Include="Assets\RoninUtils\ResouceIndex\Editor\Internal\ResouceIndexGenerator.cs" />
-    <Compile Include="Assets\RoninUtils\ResouceIndex\Editor\ResouceIndexConfig.cs" />
-    <Compile Include="Assets\RoninUtils\ResouceIndex\Editor\ResouceIndexMenu.cs" />
-    <Compile Include="Assets\RoninUtils\ResouceIndex\Editor\ResouceIndexProcesser.cs" />
-    <Compile Include="Assets\RoninUtils\RoninFramework\PoolService\Editor\PGEditorUtils.cs" />
-    <Compile Include="Assets\RoninUtils\RoninFramework\PoolService\Editor\PreRuntimePoolItemInspector.cs" />
-    <Compile Include="Assets\RoninUtils\RoninFramework\PoolService\Editor\SpawnPoolInspector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\EasyTouchBundle\EasyTouch\How to migrate from EasyTouch 4.X.txt" />
@@ -301,7 +305,6 @@
     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Wipe.shader" />
     <None Include="Assets\ProCamera2D\README.txt" />
     <None Include="Assets\RoninUtils\ResouceIndex\Readme.txt" />
-    <None Include="Assets\Shaders\Resources\Unlit-Colored.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

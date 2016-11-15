@@ -282,6 +282,8 @@
     <Compile Include="Assets\RoninUtils\CharacterController\AnimState\SetParams\AnimState_SetParam_Base.cs" />
     <Compile Include="Assets\RoninUtils\CharacterController\AnimState\SetParams\AnimState_SetParam_InAir.cs" />
     <Compile Include="Assets\RoninUtils\CharacterController\AnimState\SetParams\AnimState_SetParam_OnLand.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\AttackArea\AttackAreaItem.cs" />
+    <Compile Include="Assets\RoninUtils\CharacterController\AttackArea\AttackAreaSetting.cs" />
     <Compile Include="Assets\RoninUtils\CharacterController\CharacterControllerSetting.cs" />
     <Compile Include="Assets\RoninUtils\CharacterController\Constant.cs" />
     <Compile Include="Assets\RoninUtils\CharacterController\Data\AnimStateInfo.cs" />
@@ -375,7 +377,6 @@
     <None Include="Assets\ProCamera2D\Code\Helpers\TransitionFX\Resources\PC2D_Wipe.shader" />
     <None Include="Assets\ProCamera2D\README.txt" />
     <None Include="Assets\RoninUtils\ResouceIndex\Readme.txt" />
-    <None Include="Assets\Shaders\Resources\Unlit-Colored.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

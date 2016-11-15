@@ -10,7 +10,7 @@ namespace RoninUtils.RoninCharacterController {
     // 记录 Character Controller 的参数
     // 当前 Min Move Distance 不能通过代码修改，因此这里不记录
     [Serializable]
-    public class CharacterControllerSettingItem {
+    public class CCCollideSettingItem {
 
         [Tooltip("该Setting对应的状态")]
         public string name;
@@ -31,7 +31,6 @@ namespace RoninUtils.RoninCharacterController {
 
         /// <summary>
         /// 将参数复制到 CharacterController 上
-        /// Ronin : CFNM  && DPMX
         /// </summary>
         public void CopyTo(CharacterController cc) {
             cc.slopeLimit = slopeLimit;
@@ -54,16 +53,16 @@ namespace RoninUtils.RoninCharacterController {
         [HideInInspector]
         public string CurrentState = CCStateConstants.CC_STATE_DEFAULT;
 
-        public CharacterControllerSettingItem [] settings;
+        public CCCollideSettingItem [] settings;
 
-        private Dictionary<string, CharacterControllerSettingItem> mSettingMap = new Dictionary<string, CharacterControllerSettingItem>();
+        private Dictionary<string, CCCollideSettingItem> mSettingMap = new Dictionary<string, CCCollideSettingItem>();
 
         protected override void Awake () {
             base.Awake();
             settings.ValueForeach(item => mSettingMap.Add(item.name, item));
         }
 
-        public CharacterControllerSettingItem ActiveSetting (string state = CCStateConstants.CC_STATE_DEFAULT) {
+        public CCCollideSettingItem ActiveSetting (string state = CCStateConstants.CC_STATE_DEFAULT) {
             CurrentState = state;
             return mSettingMap.GetValueSafe(CurrentState, null);
         }
